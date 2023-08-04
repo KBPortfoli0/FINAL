@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>Contact Us.</title>
+        <div class="logo">
+            <a href="index.html"><img src="./static/logo.png" width="125px"></a>
+       </div>
+        <nav>
+            <ul id="MenuItems">
+                <li> <a href="index.html">Home.</a></li>
+                <li> <a href="shop.html">Shop.</a></li>
+                <li> <a href="aboutus.html">About.</a></li>
+                <li><a href="lookbook.html">LookBook.</a><br></li>
+                <li> <a href="contacts.html">Contact.</a></li>
+            </ul>
+        </nav>
+    <link rel="stylesheet" href="./static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body class="bum">
+    <script src="static/script.js"></script>
+         <div class="container">
+        <div class="navbar">
+    <img src="./static/images/images2/menu.png" class="menu-icon" onclick="menutoggle()">
+</div>
+    </div>
+        <div class="containers">
+            <form class="form form--hidden" id="login">
+                <h1 class="form__title">Login</h1>
+                <div class="form_message form_message--error"></div>
+                <div class="form__input-group">
+                <input type="text" class="form__input" autofocus placeholder="Username or email">
+                <div class="form__input-error-message"></div>
+                </div>
+                <div class="form__input-group">
+                <input type="password" class="form_input form_input--error" autofocus placeholder="Password">
+                <div class="form__input-error-message"></div>
+                </div>
+                <button class="form__button" type="submit" class="btn btn-default btn-lg">Continue</button>
+                <p class="form__text">
+                <a href="#" class="form__link">Forgot your Password?</a>
+                </p>
+                <p class="form__text">
+                <a class="form__link" href="./" id="linkCreateAccount">Don't have an account? Create account</a>
+                </p>
+            </form>
+            <form action="submit_form" method="post" class="reveal-content" id="createAccount">
+                <h1 class="form__title">Create Account</h1>
+                <div class="form_message form_message--error"></div>
+                <div class="form__input-group">
+                    <input name="Username" type="text" id="signupUsername" class="form__input" autofocus placeholder="Username">
+                    <div class="form__input-error-message"></div>
+                </div>
+                <div class="form__input-group">
+                    <input name="email" type="email" class="form__input" autofocus placeholder="Email Address">
+                    <div class="form__input-error-message"></div>
+                </div>
+                <div class="form__input-group">
+                    <input name="password" type="password" class="form_input form_input--error" autofocus placeholder="Password">
+                    <div class="form__input-error-message"></div>
+                </div>
+                <div class="form__input-group">
+                    <input name="passwordconfirm" type="password" class="form_input form_input--error" autofocus placeholder="Confirm Password">
+                    <div class="form__input-error-message"></div>
+                </div>
+                <button class="form__button" type="submit" class="btn btn-default btn-lg">Continue</button>
+                <p class="form__text">
+                <a class="form__link" href="./" id="linkLogin">Already have an account? Sign in</a>
+                </p>
+            </form>
+        </div>
+        <script src=""></script>
+            <!-----------js for toggle menu------------>
+    <script src='./static/script.js'>
+    var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+        function menutoggle(){
+           if (MenuItems.style.maxHeight = "0px") {
+               MenuItems.style.maxHeight = "200px";
+           } else {
+              MenuItems.style.maxHeight = "0px";
+           }
+               }
+    </script>
+    </body>
+    <br>
+
+        <!----------- footer ------------>
+        <div class="footer">
+        <div class="container">
+            <div class="row">
+               <div class="footer-col-1">
+                </div>
+                <div class="footer-col-2">
+                 <img src="./static/images/logo2.jpg" width="125px">
+                   <p> Mission Statement: To strive to support and mentor aspiring musicians in ways that will bring their goals and aspirations to reality.</p>
+                </div>
+                <div class="footer-col-3">
+                </div>
+                <div class="footer-col-4">
+               <h3>Follow Us</h3>
+                   <ul>
+                    <li>Facebook</li>
+                    <li><a href="https://twitter.com/"Target="_blank">Twitter</a></li>
+                    <li><a href="https://www.instagram.com/dxuntitled/"Target="_blank">Instagram</a></li>
+                    <li>YouTube</li>
+                    </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">2023 - Vindicta</p>
+    </div>
+</div>
+    <!-----------js for account page------------>
+    <script src='./static/script.js'>
+    var LoginForm = document.getElementById("LoginForm");
+    var RegForm = document.getElementById("RegForm");
+    var Indicator = document.getElementById("Indicator");
+        function register(){
+            RegForm.style.transform = "translateX(0px)";
+             LoginForm.style.transform = "translateX(0px)";
+            Indicator.style.transform = "translateX(100px)";
+        }
+        function login(){
+            RegForm.style.transform = "translateX(300px)";
+            LoginForm.style.transform = "translateX(300px)";
+            Indicator.style.transform = "translateX(0px)";
+        }
+    </script>
+</html>
